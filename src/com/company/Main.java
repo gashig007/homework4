@@ -33,9 +33,6 @@ public class Main {
 
         ArrayList<String> C = new ArrayList<>();
         C.addAll(A);
-        C.addAll(B);
-        System.out.println(C);
-        C.removeAll(B);
         Collections.reverse(B);
         C.addAll(B);
         Collections.rotate(C.subList(1, 6), -1);
