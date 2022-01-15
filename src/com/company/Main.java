@@ -32,15 +32,16 @@ public class Main {
         System.out.println(B);
 
         ArrayList<String> C = new ArrayList<>();
-        Collections.reverse(B);
         C.addAll(A);
         C.addAll(B);
         System.out.println(C);
-
-        Collections.rotate(C.subList(9, 1));
-        Collections.rotate(C.subList(8, 3));
-        Collections.rotate(C.subList(7, 5));
-        Collections.rotate(C.subList(8, 7));
+        C.removeAll(B);
+        Collections.reverse(B);
+        C.addAll(B);
+        Collections.rotate(C.subList(1, 6), -1);
+        Collections.rotate(C.subList(1, 7), -1);
+        Collections.rotate(C.subList(1, 8), -1);
+        Collections.rotate(C.subList(1, 9), -1);
         System.out.println(C);
 
         C.sort(Comparator.comparingInt(String::length));
